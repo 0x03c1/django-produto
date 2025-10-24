@@ -28,3 +28,13 @@ pip install django
 ```bash
 pip freeze > requirements.txt
 ```
+
+- Criar um projeto no Django `o ponto no final` esta atrelado a criar a pasta no mesmo nível
+```bash
+django-admin startproject config .
+```
+
+- Criar a aplicação gerenciada pelo Django
+```bash
+python manage.py startapp produtos
+```
