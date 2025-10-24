@@ -38,3 +38,43 @@ django-admin startproject config .
 ```bash
 python manage.py startapp produtos
 ```
+
+- Configure em `settings.py` a aplicação criada anteriormente.
+```bash
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'produtos', # Adicione aqui o nome da sua aplicação
+]
+```
+
+Após criar seu modelo da aplicação na pasta `models.py` execute o comando abaixo
+
+```bash
+python manage.py makemigrations
+```
+- em seguida iniciamos o comando 
+```bash
+python manage.py migrate
+```
+
+- Registraremos agora no arquivo `admin.py` o
+
+```python
+from django.contrib import admin
+
+from .models import Produto
+
+admin.site.register(Produto)
+```
+
+- Agora criaremos o super usuário para acessar o ambiente admin.
+```bash
+python manage.py createsuperuser
+```
+
+Agora iniciamos o nosso servidor `python manage.py runserver` e acessamos 127.0.0.1:8000/admin o acesso se dará por parte com o nome de usuário e senha que você definiu anteiormente.
