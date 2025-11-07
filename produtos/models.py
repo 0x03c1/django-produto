@@ -10,13 +10,3 @@ class Produto(models.Model):
 
     def __str__(self) -> str:
        return self.nome
-    
-
-class Endereco(models.Model):
-    logradouro = models.CharField(max_length=100)
-    cep = models.IntegerField()
-    numero = models.IntegerField()
-    cidade = models.CharField(max_length=100)
-
-    def __str__(self) -> str:
-       return self.cidade
