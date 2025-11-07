@@ -4,4 +4,3 @@ from .models import Produto, Endereco
 # Register your models here.
 
 admin.site.register(Produto)
-admin.site.register(Endereco)
