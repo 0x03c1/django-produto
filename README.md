@@ -80,6 +80,11 @@ from .models import Produto
 admin.site.register(Produto)
 ```
 
+- A notção `login_required` requer que o usuário esteja logado para acessar o recurso daquele método, sendo assim, é de suma importância adicionar em todo método GET e POST.
+```python
+@login_required(login_url='login')
+```
+
 - Agora criaremos o super usuário para acessar o ambiente admin.
 
 ```bash
