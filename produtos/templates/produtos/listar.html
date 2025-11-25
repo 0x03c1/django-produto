@@ -7,8 +7,11 @@
     <title>Controle de Estoque FICR</title>
 </head>
 <body background="#666">
-    <h1>Controle de Estoque FICR</h1>
-    <a href="{% url 'adicionar_produto' %}" class="btn btn-primary mb-3">Novo produto</a>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>Controle de Estoque</h1>
+        <a href="{% url 'logout' %}" class="btn btn-outline-danger">Sair</a>
+    </div>
+        <a href="{% url 'adicionar_produto' %}" class="btn btn-primary mb-3">Novo produto</a>
     <table class="table table-striped">
     <thead>
         <tr>
